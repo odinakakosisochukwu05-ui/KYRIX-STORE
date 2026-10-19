@@ -1,0 +1,368 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+body {
+/* background-color: #f4f5f9; */
+color: #222;
+background-image:url('poster2.jpg');
+}
+
+
+img {
+max-width: 100%;
+display: block;
+}
+
+a {
+text-decoration: none;
+}
+
+/* FIRST NAVBAR */
+.navbar {
+background-color: #14213d;
+color: white;
+padding: 20px 5%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 15px;
+}
+
+.logo {
+display: flex;
+align-items: center;
+gap: 15px;
+}
+
+.logo img {
+width: 80px;
+height: 80px;
+object-fit: cover;
+border: 5px solid red;
+border-radius: 18px 2px 20px;
+}
+
+.logo h2 {
+font-size: 30px;
+}
+
+.navbar a {
+background-color: #54b6f3ea;
+color: #14213d;
+padding: 10px 15px;
+border-radius: 1px 25px;
+font-weight: bold;
+/* white-space: nowrap; */
+}
+
+.navbar a:hover{
+    color: #ca2f2f;
+}
+
+/* SECOND NAVBAR */
+.search-nav {
+background-color: rgb(124, 22, 22);
+padding: 15px 5%;
+display: flex;
+justify-content: end;
+gap: 10px;
+}
+
+
+
+.search-nav input {
+width: 100%;
+max-width: 50%;
+/* min-width: 0; */
+padding-left: 12px;
+border: 1px solid #ccc;
+border-radius: 10px;
+font-size: 15px;
+}
+
+input:focus {
+        border: 3px solid blue;
+        outline: none;
+    }
+
+.search-nav button {
+padding: 12px 20px;
+background-color: #54b6f3ea;
+color: #14213d;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+.search-nav button:hover{
+    color: #d61111;
+}
+
+/* MAIN LAYOUT */
+.container {
+display: grid;
+grid-template-columns: 200px minmax(0, 1fr);
+gap: 10px;
+padding: 30px 4%;
+max-width: 1600px;
+margin: auto;
+/* border: 10px solid red; */
+}
+
+/* SIDEBAR */
+.sidebar {
+background-color: rgb(121, 11, 11);
+height:100%;
+padding: 20px;
+border-radius: 8px;
+align-self: start;
+/* border: 2px solid red; */
+}
+
+.sidebar h3 {
+margin-bottom: 15px;
+color: #5975b1;
+text-align: center;
+}
+
+.sidebar a {
+display: block;
+color: #d89393;
+padding: 12px 5px;
+font-size: 20px;
+padding: 25px;
+/* text-align: center; */
+/* border-bottom: 1px solid #0c0101; */
+}
+
+.sidebar a:hover {
+color: #063be9;
+}
+
+/* PRODUCTS */
+
+
+.products h2 {
+margin-bottom: 20px;
+color: #9dc712;
+font-size: 40px;
+}
+
+/* FOUR PRODUCTS PER ROW */
+.product-grid {
+display: grid;
+grid-template-columns: repeat(4, minmax(0, 1fr));
+gap: 15px;
+}
+
+/* PRODUCT CARD */
+.card {
+background-color: white;
+border-radius: 180px 10px 10px ;
+overflow: hidden;
+padding-bottom: 15px;
+border: 1px solid #d61111;
+}
+
+.card img {
+width: 100%;
+height: 200px;
+object-fit: contain;
+padding: 8px;
+}
+
+.card h3 {
+font-size: 16px;
+padding: 5px 12px;
+overflow-wrap: anywhere;
+}
+
+.card p {
+color: #2e0303;
+font-size: 13px;
+line-height: 1.5;
+padding: 5px 12px;
+}
+
+.card h4 {
+color: #14213d;
+font-size: 17px;
+padding: 8px 12px;
+}
+
+.card button {
+display: block;
+width: calc(100% - 24px);
+margin: 5px 12px 0;
+padding: 10px 5px;
+background-color: #14213d;
+color: white;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+
+.card button:hover {
+background-color: #829adb;
+color: #14213d;
+}
+
+/* TABLET */
+@media (max-width: 1100px) {
+.product-grid {
+grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+}
+
+/* MOBILE */
+@media (max-width: 700px) {
+
+.navbar {
+padding: 12px 4%;
+}
+
+.hamburger{
+    font-size: 50px;
+    border: 2px solid white;
+    margin-right: 50px;
+}
+
+.sidebar{
+    display: none;
+}
+
+.logo {
+    gap: 8px;
+}
+
+.logo img {
+    width: 40px;
+    height: 40px;
+}
+
+.logo h2 {
+    font-size: 19px;
+}
+
+.navbar > a {
+    padding: 9px 10px;
+    font-size: 12px;
+}
+
+.search-nav {
+    padding: 12px 4%;
+}
+
+.search-nav input {
+    font-size: 13px;
+}
+
+.search-nav button {
+    padding: 10px 12px;
+}
+
+.container {
+    grid-template-columns: 1fr;
+    padding: 20px 4%;
+    gap: 20px;
+}
+
+
+/* TWO PRODUCTS PER ROW */
+.product-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+}
+
+.card img {
+    height: 150px;
+}
+
+.card h3 {
+    font-size: 14px;
+}
+
+.card p {
+    font-size: 12px;
+}
+
+.card h4 {
+    font-size: 15px;
+}
+
+.card button {
+    font-size: 12px;
+}
+
+
+}
+
+/* VERY SMALL PHONES */
+@media (max-width: 360px) {
+.logo h2 {
+font-size: 16px;
+}
+
+
+.logo img {
+    width: 35px;
+    height: 35px;
+}
+
+.navbar a {
+    font-size: 11px;
+    padding: 8px;
+}
+
+.hamburger{
+    font-size: 50px;
+    border: 2px solid white;
+    margin-right: 50px;
+}
+
+.product-grid {
+    gap: 8px;
+}
+
+.card img {
+    height: 120px;
+}
+
+.card h3 {
+    font-size: 12px;
+}
+
+}
+
+/* FOOTER */
+footer {
+background-color: #14213d;
+color: white;
+text-align: center;
+padding: 30px 15px 15px;
+margin-top: 20px;
+}
+
+footer:hover{
+    color: #063be9;
+}
+
+footer h2 {
+margin-bottom: 10px;
+}
+
+footer p {
+color: #ddd;
+font-size: 14px;
+margin-bottom: 10px;
+overflow-wrap: anywhere;
+}
+
+footer .copyright {
+border-top: 1px solid #39445b;
+padding-top: 15px;
+margin-top: 20px;
+font-size: 12px;
+}
